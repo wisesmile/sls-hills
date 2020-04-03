@@ -35,6 +35,14 @@ plugins:
   - serverless-jest-plugin
 
 functions:
+  calc:
+    handler: src/calc001/index.handler
+    events:
+      - http:
+          path: calc
+          method: get
+          cors: true
+
   myFunction:
     handler: src/myFunction/index.handler
     events:
