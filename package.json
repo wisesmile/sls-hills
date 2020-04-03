@@ -1,0 +1,22 @@
+{
+  "name": "sls-hills",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wisesmile/sls-hills.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wisesmile/sls-hills/issues"
+  },
+  "homepage": "https://github.com/wisesmile/sls-hills#readme",
+  "devDependencies": {
+    "serverless-jest-plugin": "^0.3.0"
+  }
+}
