@@ -12,9 +12,7 @@ module.exports.handler = (event, context, callback) => {
   };
   const response = {
     statusCode: 200,
-    body: JSON.stringify({
-      message: { message: dat },
-    }),
+    body: JSON.stringify({ message: dat }),
   };
   callback(null, response);
 };
