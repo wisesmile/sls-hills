@@ -37,6 +37,16 @@ plugins:
 functions:
   myFunction:
     handler: src/myFunction/index.handler
+    events:
+      - http:
+          path: myFunc
+          method: get
+          cors: true
 
   hello:
     handler: handler.hello
+    events:
+      - http:
+          path: hello
+          method: get
+          cors: true
