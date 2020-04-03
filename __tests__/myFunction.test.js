@@ -29,7 +29,7 @@ describe("myFunction", () => {
   it("expects a body", () => {
     return wrapped.run({}).then((response) => {
       expect(response.body).toBe(
-        `{"message":"Go Serverless v1.0! Your function executed successfully!","input":{}}`
+        `{"message":"Go Serverless v1.0! Your function executed successfully!"}`
       );
     });
   });
