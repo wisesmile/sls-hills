@@ -21,3 +21,9 @@ serverless invoke local -f calc
 ## Links
 
 https://github.com/nordcloud/serverless-jest-plugin
+
+https://1y7c2yy6p0.execute-api.us-east-1.amazonaws.com/production/hello
+
+https://1y7c2yy6p0.execute-api.us-east-1.amazonaws.com/production/calc
+
+https://9ti6dgzjb4.execute-api.us-east-1.amazonaws.com/develop/hello
