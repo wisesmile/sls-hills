@@ -10,7 +10,7 @@ module.exports.handler = async (event, context) => {
   let n = event.name;
   console.log(`param ==> ${n}`);
 
-  let c = getDadJoke();
+  let j = getDadJoke();
   console.log(`joke => ${j}`);
 
   // results object
