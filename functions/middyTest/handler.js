@@ -31,7 +31,6 @@ const inputSchema = {
 // Let's "middyfy" our handler, then we will be able to attach middlewares to it
 const handler = middy(businessLogic)
   .use(jsonBodyParser()) // parses the request body when it's a JSON and converts it to an object
-  .use(validator({ inputSchema })) // validates the input
   .use(httpErrorHandler()); // handles common http errors and returns proper responses
 
 module.exports = { handler };
