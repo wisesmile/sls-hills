@@ -18,5 +18,8 @@
   "homepage": "https://github.com/wisesmile/sls-hills#readme",
   "devDependencies": {
     "serverless-jest-plugin": "^0.3.0"
+  },
+  "dependencies": {
+    "@middy/core": "^1.0.0"
   }
 }

@@ -55,3 +55,11 @@ functions:
           path: /add-income
           method: post
           cors: true
+
+  middytest:
+    handler: functions/middyTest/handler.handler
+    events:
+      - http:
+          path: /middy/test
+          method: post
+          cors: true
