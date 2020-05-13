@@ -2,7 +2,7 @@
 
 const { getDadJoke } = require("./utils");
 
-module.exports.calc = async (event, context) => {
+module.exports.handler = async (event, context) => {
   if (event.body) {
     event = JSON.parse(event.body);
   }
@@ -10,11 +10,10 @@ module.exports.calc = async (event, context) => {
   let n = event.name;
   console.log(`param ==> ${n}`);
 
-  // execute the adder function
   let c = getDadJoke();
   console.log(`joke => ${j}`);
 
-  // create an object to hold all the values
+  // results object
   var obj = {
     name: event.name,
     name_two: n,
