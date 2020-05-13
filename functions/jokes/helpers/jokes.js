@@ -9,7 +9,7 @@ const options = {
 
 const JOKES_API_URL = "https://icanhazdadjoke.com/";
 
-const getDadJokeSecond = () =>
+const getDadJokeApi = () =>
   new Promise((resolve, reject) => {
     fetch(JOKES_API_URL, options)
       .then((response) => response.json())
@@ -18,5 +18,5 @@ const getDadJokeSecond = () =>
   });
 
 module.exports = {
-  getDadJokeSecond,
+  getDadJokeApi,
 };

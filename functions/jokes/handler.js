@@ -1,7 +1,7 @@
 "use strict";
 
-const { getDadJoke } = require("./utils");
-const { getDadJokeSecond } = require("./helpers/jokes");
+const { getDadJokeLocal } = require("./helpers/joke");
+const { getDadJokeApi } = require("./helpers/jokes");
 
 module.exports.handler = async (event, context) => {
   // step one process event body
@@ -12,22 +12,22 @@ module.exports.handler = async (event, context) => {
   let n = event.name;
   console.log(`name => ${n}`);
 
-  let j = getDadJoke();
-  console.log(`joke => ${j}`);
+  let j = getDadJokeLocal();
+  console.log(`local => ${j}`);
 
-  let z = getDadJokeSecond;
-  console.log(`joke2 => ${z}`);
+  let z = getDadJokeApi();
+  console.log(`api => ${z}`);
 
   // results object
   let results = {
     name: n,
-    joke: j,
+    local: j,
   };
 
   // meta
-  let api_version = 1;
+  let api_version = 2;
   let api = "jokes";
-  let run_date = "2020-05-05";
+  let run_date = "2020-05-13";
 
   let meta = {
     version: api_version,
