@@ -20,6 +20,9 @@
     "serverless-jest-plugin": "^0.3.0"
   },
   "dependencies": {
-    "@middy/core": "^1.0.0"
+    "@middy/core": "^1.0.0",
+    "@middy/http-error-handler": "^1.0.0",
+    "@middy/http-json-body-parser": "^1.0.0",
+    "@middy/validator": "^1.0.0"
   }
 }
