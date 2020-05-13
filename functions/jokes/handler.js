@@ -16,12 +16,12 @@ module.exports.handler = async (event, context) => {
   console.log(`joke => ${j}`);
 
   let z = getDadJokeSecond;
+  console.log(`joke2 => ${z}`);
 
   // results object
   let results = {
     name: n,
     joke: j,
-    jokeSecond: z,
   };
 
   // meta
