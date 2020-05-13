@@ -17,7 +17,7 @@ module.exports.handler = async (event, context) => {
   var obj = {
     name: event.name,
     name_two: n,
-    joke: c,
+    joke: j,
   };
 
   return {
