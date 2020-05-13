@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 const options = {
   headers: {
     Accept: "application/json",
-    "User-Agent: My Library (https://github.com/wisesmile/sls-hills)",
+    "User-Agent: My Library (https://github.com/wisesmile/sls-hills)"
   },
 };
 
