@@ -1,6 +1,7 @@
 "use strict";
 
 const { getDadJoke } = require("./utils");
+const { getDadJokeSecond } = require("./helpers/jokes");
 
 module.exports.handler = async (event, context) => {
   // step one process event body
@@ -14,10 +15,13 @@ module.exports.handler = async (event, context) => {
   let j = getDadJoke();
   console.log(`joke => ${j}`);
 
+  let z = getDadJokeSecond;
+
   // results object
   let results = {
     name: n,
     joke: j,
+    jokeSecond: z,
   };
 
   // meta
