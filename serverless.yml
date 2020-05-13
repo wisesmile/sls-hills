@@ -16,6 +16,14 @@ custom:
     # collectCoverage: true
 
 functions:
+  jokes:
+    handler: functions/jokes/index.handler
+    events:
+      - http:
+          path: /jokes
+          method: post
+          cors: true
+
   calc:
     handler: src/calc001/index.handler
     events:
