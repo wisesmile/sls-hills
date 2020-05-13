@@ -57,7 +57,7 @@ functions:
           cors: true
 
   middytest:
-    handler: functions/middyTest/handler.middyFunction
+    handler: functions/middyTest/handler.handler
     events:
       - http:
           path: /middy/test
