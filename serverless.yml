@@ -63,3 +63,11 @@ functions:
           path: /middy/test
           method: post
           cors: true
+  
+  write-to-s3:
+    handler: src/write-to-s3/handler.handler
+      - http:
+          path: /write-file
+          method: post
+          cors: true
+          
