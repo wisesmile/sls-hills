@@ -2,18 +2,21 @@ service: sls-hills
 app: sls-hills
 org: wisesmile
 
+custom:
+  bucket: wiesemile-test
+
 provider:
   name: aws
   runtime: nodejs12.x
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - s3:PutObject
+        - s3:PutObjectAcl
+      Resource: "arn:aws:s3:::${self:custom.bucket}/*"
 
 plugins:
   # - serverless-jest-plugin
-custom:
-  # jest:
-  # You can pass jest options here
-  # See details here: https://facebook.github.io/jest/docs/configuration.html
-  # For instance, uncomment next line to enable code coverage
-  # collectCoverage: true
 
 functions:
   jokes:
@@ -30,3 +33,12 @@ functions:
           path: /jakes
           method: post
           cors: true
+  save:
+    handler: functions/write-to-s3/handler.save
+    events:
+      - http:
+          path: /file-to-s3
+          method: post
+          cors: true
+    environment:
+      BUCKET: ${self:custom.bucket}

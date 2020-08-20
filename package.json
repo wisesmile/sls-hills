@@ -16,14 +16,9 @@
     "url": "https://github.com/wisesmile/sls-hills/issues"
   },
   "homepage": "https://github.com/wisesmile/sls-hills#readme",
-  "devDependencies": {
-    "serverless-jest-plugin": "^0.3.0"
-  },
+  "devDependencies": {},
   "dependencies": {
-    "@middy/core": "^1.0.0",
-    "@middy/http-error-handler": "^1.0.0",
-    "@middy/http-json-body-parser": "^1.0.0",
-    "@middy/validator": "^1.0.0",
+    "aws-sdk": "^2.7.9",
     "node-fetch": "^2.6.0"
   }
 }
