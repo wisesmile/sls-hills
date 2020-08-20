@@ -10,9 +10,6 @@ module.exports.save = (event, context, callback) => {
 
   s3.putObject(params, function (err, data) {
     if (err) console.log(err);
-    else
-      console.log(
-        "Successfully saved object to " + process.env.BUCKET + "/" + keyName
-      );
+    else console.log("Successfully saved object.");
   });
 };

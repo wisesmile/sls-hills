@@ -37,7 +37,7 @@ functions:
     handler: functions/write-to-s3/handler.copy.save
     events:
       - http:
-          path: /file-to-s3
+          path: /file-to-s3-new
           method: post
           cors: true
     environment:
