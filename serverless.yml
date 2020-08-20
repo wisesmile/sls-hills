@@ -23,45 +23,10 @@ functions:
           path: /jokes
           method: post
           cors: true
-  calc:
-    handler: src/calc001/index.handler
+  jakes:
+    handler: functions/jokes/handler.handler
     events:
       - http:
-          path: calc
-          method: get
-          cors: true
-  myFunction:
-    handler: src/myFunction/index.handler
-    events:
-      - http:
-          path: myFunc
-          method: get
-          cors: true
-  hello:
-    handler: handler.hello
-    events:
-      - http:
-          path: hello
-          method: get
-          cors: true
-  addincome:
-    handler: src/addincome/adder.calc
-    events:
-      - http:
-          path: /add-income
-          method: post
-          cors: true
-  middytest:
-    handler: functions/middyTest/handler.handler
-    events:
-      - http:
-          path: /middy/test
-          method: post
-          cors: true
-  write-to-s3:
-    handler: src/write-to-s3/handler.handler
-    events:
-      - http:
-          path: /write-file
+          path: /jakes
           method: post
           cors: true
