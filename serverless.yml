@@ -7,13 +7,13 @@ provider:
   runtime: nodejs12.x
 
 plugins:
-  - serverless-jest-plugin
+  # - serverless-jest-plugin
 custom:
-  jest:
-    # You can pass jest options here
-    # See details here: https://facebook.github.io/jest/docs/configuration.html
-    # For instance, uncomment next line to enable code coverage
-    # collectCoverage: true
+  # jest:
+  # You can pass jest options here
+  # See details here: https://facebook.github.io/jest/docs/configuration.html
+  # For instance, uncomment next line to enable code coverage
+  # collectCoverage: true
 
 functions:
   jokes:
@@ -23,7 +23,6 @@ functions:
           path: /jokes
           method: post
           cors: true
-
   calc:
     handler: src/calc001/index.handler
     events:
@@ -31,7 +30,6 @@ functions:
           path: calc
           method: get
           cors: true
-
   myFunction:
     handler: src/myFunction/index.handler
     events:
@@ -39,7 +37,6 @@ functions:
           path: myFunc
           method: get
           cors: true
-
   hello:
     handler: handler.hello
     events:
@@ -47,7 +44,6 @@ functions:
           path: hello
           method: get
           cors: true
-
   addincome:
     handler: src/addincome/adder.calc
     events:
@@ -55,7 +51,6 @@ functions:
           path: /add-income
           method: post
           cors: true
-
   middytest:
     handler: functions/middyTest/handler.handler
     events:
@@ -63,11 +58,10 @@ functions:
           path: /middy/test
           method: post
           cors: true
-  
   write-to-s3:
     handler: src/write-to-s3/handler.handler
+    events:
       - http:
           path: /write-file
           method: post
           cors: true
-          
