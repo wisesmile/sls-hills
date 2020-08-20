@@ -34,7 +34,7 @@ functions:
           method: post
           cors: true
   save:
-    handler: functions/write-to-s3/handler.copy.save
+    handler: functions/write-to-s3/handler.save
     events:
       - http:
           path: /file-to-s3-new
