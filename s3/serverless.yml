@@ -1,15 +1,13 @@
 org: wisesmile
 app: sls-hills
-service: default
+service: hills-s3
 
 custom:
-  bucket: wiesemile-test
+  bucket: hills-s3-test
 
 provider:
   name: aws
   runtime: nodejs12.x
-  apiKeys:
-    - slsHillsApiKey
   iamRoleStatements:
     - Effect: Allow
       Action:
@@ -17,22 +15,12 @@ provider:
         - s3:PutObjectAcl
       Resource: "arn:aws:s3:::${self:custom.bucket}/*"
 
-plugins:
-  # - serverless-jest-plugin
-
 functions:
-  jokes:
-    handler: functions/jokes/handler.handler
-    events:
-      - http:
-          path: /jokes
-          method: post
-          cors: true
   save:
     handler: functions/write-to-s3/handler.save
     events:
       - http:
-          path: /file-to-s3-new
+          path: /write-to-s3
           method: post
           cors: true
     environment:

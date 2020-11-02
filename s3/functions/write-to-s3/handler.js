@@ -12,4 +12,15 @@ module.exports.save = (event, context, callback) => {
     if (err) console.log(err);
     else console.log("Successfully saved object.");
   });
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify(
+      {
+        message: "file saved",
+      },
+      null,
+      2
+    ),
+  };
 };
