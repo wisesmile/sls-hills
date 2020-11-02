@@ -1,0 +1,33 @@
+org: wisesmile
+app: sls-hills
+service: hills-hello
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  apiKeys:
+    - myApiKeyHillsHello
+
+functions:
+  jokes:
+    handler: functions/jokes/handler.handler
+    events:
+      - http:
+          path: /jokes
+          method: post
+          cors: true
+  hello:
+    handler: functions/hello/handler.hello
+    events:
+      - http:
+          path: hello
+          method: get
+          cors: true
+  calculate:
+    handler: functions/calculate/calculate.message
+    events:
+      - http:
+          path: calculate
+          method: post
+          private: true
+          cors: true

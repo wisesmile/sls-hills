@@ -1,6 +1,6 @@
-service: sls-hills
-app: sls-hills
 org: wisesmile
+app: sls-hills
+service: default
 
 custom:
   bucket: wiesemile-test
@@ -8,6 +8,8 @@ custom:
 provider:
   name: aws
   runtime: nodejs12.x
+  apiKeys:
+    - slsHillsApiKey
   iamRoleStatements:
     - Effect: Allow
       Action:
@@ -24,13 +26,6 @@ functions:
     events:
       - http:
           path: /jokes
-          method: post
-          cors: true
-  jakes:
-    handler: functions/jokes/handler.handler
-    events:
-      - http:
-          path: /jakes
           method: post
           cors: true
   save:
