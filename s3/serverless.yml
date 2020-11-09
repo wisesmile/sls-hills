@@ -17,11 +17,6 @@ provider:
 
 functions:
   save:
-    handler: functions/write-to-s3/handler.save
-    events:
-      - http:
-          path: /write-to-s3
-          method: post
-          cors: true
+    handler: functions/alpha/save.handler
     environment:
       BUCKET: ${self:custom.bucket}
